@@ -77,6 +77,7 @@ $product_path = 'http://api.claudeandthepigeon.co.uk/images/products/';
           ?>
           <h1><?php echo $row['name'] ?></h1>
           <p><?php echo $row['description']; ?></p>
+          <p>Ref: <?php echo $row['id']; ?></p>
         </div>
         <!-- Product Pricing -->
         <div class="product-price">
