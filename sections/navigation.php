@@ -41,5 +41,25 @@ $decorative = 6;
             <a href="<?php echo $base_url; ?>/contact.php" class="nav-item nav-link">CONTACT US</a>
         </div>
     </div>
+    <div class="col-4">
+        <div class="d-flex align-items-center justify-content-end">
+             <div style="display: inline-flex;">
+                <a 
+                class="btn btn-lg btn-primary btn-square btn-outline-secondary rounded-circle me-1" 
+                href="https://www.instagram.com/claudeandthepigeon" 
+                target="_blank"
+                >
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a 
+                class="btn btn-lg btn-primary btn-square btn-outline-secondary rounded-circle me-1" 
+                href="https://www.facebook.com/claudeandthepigeon" 
+                target="_blank"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 </nav>
 <!-- Navbar End -->
