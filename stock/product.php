@@ -48,66 +48,46 @@ require_once '../includes/contact-form/process.php';
 
 
 
-<!--     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="section-title bg-white text-center text-primary px-3">Latest Stock</h6>
-            </div>
-            <div class="slider"> -->
-            	<?php foreach ($products as $product) { 
-            		$pathx = '../assets/img/claude/';
-        		?>
-<!--                 <div class="overlay-container">
-                    <img class="image" src="<?php echo $pathx . $product['photo']; ?>" />
-                    <div class="overlay">
-                        <div class="text"><?php echo $product['name'] ?></div>
-                    </div>
-                </div> -->
-            	<?php } ?>
-<!--             </div>
-        </div>
-    </div> -->
-
 <?php 
-
 $id = $_GET['id'];
-
-$query = "SELECT * FROM products WHERE id = $id JOIN categories ON products.category_id = categories.id"; //You don't need a ; like you do in SQL
-$products = $mysqli->query($query);
-
-$category_id = $product['category_id'];
-
-$query2 = "SELECT * FROM categories WHERE id = $category_id"; //You don't need a ; like you do in SQL
-$result = $mysqli->query($query2);
-$category = $result->fetch_assoc();
-
-$product_path = '../assets/img/claude/';
-
+$product_path = 'http://api.claudeandthepigeon.co.uk/images/products/';
 ?>
     <main class="container" style="max-width: 1200px; margin: 0 auto; padding: 15px; display: flex;">
-
-      <!-- Left Column / Headphones Image -->
+    <?php 
+    if ($result = $mysqli->query("SELECT * FROM products WHERE id=$id")) {
+        while ($row = $result->fetch_assoc()) {
+        $category_id = $row['category_id'];
+    ?>
       <div class="left-column">
-        <img data-image="black" src="<?php echo $product_path . $product['image']; ?>" alt="">
-        <img data-image="blue" src="../assets/img/claude/book_shelf.JPG" alt="">
-        <img data-image="red" class="active" src="../assets/img/claude/book_shelf.JPG" alt="">
+        <img src="<?php echo $product_path . $row['photo']; ?>" alt="">
       </div>
-
 
       <!-- Right Column -->
       <div class="right-column">
-
         <!-- Product Description -->
         <div class="product-description">
+            <?php 
+            if ($result2 = $mysqli->query("SELECT * FROM categories WHERE id = $category_id")) {
+                while ($category = $result2->fetch_assoc()) {
+            ?>
           <span><a href="<?php echo $base_url; ?>/stock/category.php?c=<?php echo strtolower($category['id']); ?>"><?php echo $category['name']; ?></a></span>
-          <h1><?php echo $product['name'] ?></h1>
-          <p><?php echo $product['description']; ?></p>
+          <?php 
+                }
+            }
+          ?>
+          <h1><?php echo $row['name'] ?></h1>
+          <p><?php echo $row['description']; ?></p>
         </div>
         <!-- Product Pricing -->
         <div class="product-price">
-          <span>£<?php echo $product['price']; ?></span>
+          <span>£<?php echo $row['price']; ?></span>
         </div>
       </div>
+    <?php 
+        }
+    }
+    $result->free_result();
+    ?>
     </main>
 
 	<?php require_once '../sections/footer.php'; ?>
