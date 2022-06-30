@@ -10,6 +10,12 @@ if ($_GET['c']) {
 
     $query = "SELECT * FROM products WHERE category_id = $c"; //You don't need a ; like you do in SQL
     $products = $mysqli->query($query);
+
+    $category_id = $c;
+
+    $query2 = "SELECT * FROM categories WHERE id = $category_id"; //You don't need a ; like you do in SQL
+    $result = $mysqli->query($query2);
+    $category = $result->fetch_assoc();
 }
 ?>
 
@@ -55,9 +61,9 @@ if ($_GET['c']) {
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="bg-white text-center text-primary">
-                Claude & The Pigeon was born because our passion for buying was out of control, after ultimatums from our better halves we decided it would be a easier to start selling than find somewhere new to live.
-				</p>
+                <h6 class="bg-white text-center text-primary">
+                <?php echo $category['name']; ?>
+				</h6>
             </div>
         </div>
     </div>
@@ -66,6 +72,7 @@ if ($_GET['c']) {
         <div class="container">
             <div class="row">
                 <?php 
+
                 $count = 1;
                 foreach ($products as $product) {
                         $pathx = '../assets/img/claude/';
