@@ -50,7 +50,7 @@ require_once '../includes/contact-form/process.php';
 
 <?php 
 $id = $_GET['id'];
-$product_path = 'http://api.claudeandthepigeon.co.uk/images/products/';
+$product_path = 'https://api.claudeandthepigeon.co.uk/images/products/';
 ?>
     <main class="container" style="max-width: 1200px; margin: 0 auto; padding: 15px; display: flex;">
     <?php 
@@ -59,7 +59,7 @@ $product_path = 'http://api.claudeandthepigeon.co.uk/images/products/';
         $category_id = $row['category_id'];
     ?>
       <div class="left-column">
-        <img src="<?php echo $product_path . $row['photo']; ?>" alt="">
+        <img src="<?php echo $product_path . $row['photo']; ?>" alt="" style="opacity: 1;">
       </div>
 
       <!-- Right Column -->
