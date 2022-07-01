@@ -41,17 +41,17 @@ require_once 'includes/contact-form/process.php';
     <link href="assets/css/slick-slider.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color: #E9DFD5;">
 
 <?php require_once 'sections/navigation.php'; ?>
 
     <div class="container-xxl py-5">
         <div class="">
             <div class="mx-auto mb-5" data-wow-delay="0.1s" style="">
-                <h6 class="bg-white text-center text-primary" style="font-size: 2.2em;">
+                <h6 class="text-center text-primary" style="font-size: 2.2em;">
                     Contact
                 </h6>
-                <h6 class="bg-white text-center text-primary" style="max-width: 800px; text-align: center; margin: auto;">
+                <h6 class="text-center text-primary" style="max-width: 800px; text-align: center; margin: auto;">
                     We are always interested in purchasing items. If you have something you think may be of interest please get in touch via our contact form, email or phone.
                 </h6>
                 <div class="row">
