@@ -45,11 +45,9 @@ require_once 'includes/contact-form/process.php';
 
 <?php require_once 'sections/navigation.php'; ?>
 
-<?php require_once 'sections/banner.php';?>
-
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <div class="text-center mx-auto mb-5" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="bg-white text-center text-primary">
                 About
 				</h6>
