@@ -79,12 +79,12 @@ if ($_GET['c']) {
 
                 ?>
                 <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <a href="<?php echo $base_url; ?>/stock/product.php?id=<?php echo $product['id']; ?>">
+                    <a href="<?php echo $base_url; ?>/stock/product?id=<?php echo $product['id']; ?>">
                         <div class="team-item text-center p-4">
                             <img class="img-fluid" src="<?php echo $pathx . $product['photo']; ?>" alt="">
                             <div class="team-text">
                                 <div class="team-title">
-                                    <h5><?php echo $product['name']; ?></h5>
+                                    <h5><?php echo $product['name']; ?> (ref: <?php echo $product['id']; ?>)</h5>
                                     <span><?php echo '£' . $product['price']; ?></span>
                                 </div>
                                 <div class="team-social">
