@@ -45,11 +45,9 @@ require_once 'includes/contact-form/process.php';
 
 <?php require_once 'sections/navigation.php'; ?>
 
-<?php require_once 'sections/banner.php';?>
-
     <div class="container-xxl py-5">
         <div class="">
-            <div class="mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="">
+            <div class="mx-auto mb-5" data-wow-delay="0.1s" style="">
                 <h6 class="bg-white text-center text-primary" style="font-size: 2.2em;">
                     Contact
                 </h6>
@@ -102,7 +100,7 @@ require_once 'includes/contact-form/process.php';
                     </div>
 
 
-            <div class="col-lg-6 wow fadeInUp mx-5 my-5" data-wow-delay="0.5s">
+            <div class="col-lg-6 mx-5 my-5" data-wow-delay="0.5s">
                 <form 
                 name="formContact" 
                 method="POST"
