@@ -70,7 +70,7 @@ $product_path = 'https://api.claudeandthepigeon.co.uk/images/products/';
             if ($result2 = $mysqli->query("SELECT * FROM categories WHERE id = $category_id")) {
                 while ($category = $result2->fetch_assoc()) {
             ?>
-          <span><a href="<?php echo $base_url; ?>/stock/category.php?c=<?php echo strtolower($category['id']); ?>"><?php echo $category['name']; ?></a></span>
+          <span><a href="<?php echo $base_url; ?>/stock/category?c=<?php echo strtolower($category['id']); ?>"><?php echo $category['name']; ?></a></span>
           <?php 
                 }
             }
