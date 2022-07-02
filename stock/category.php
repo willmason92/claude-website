@@ -84,7 +84,7 @@ if ($_GET['c']) {
                             <img class="img-fluid" src="<?php echo $pathx . $product['photo']; ?>" alt="">
                             <div class="team-text">
                                 <div class="team-title">
-                                    <h5><?php echo $product['name']; ?> (ref: <?php echo $product['id']; ?>)</h5>
+                                    <h5><?php echo $product['name']; ?> (ref: CP00<?php echo $product['id']; ?>)</h5>
                                     <span><?php echo '£' . $product['price']; ?></span>
                                 </div>
                                 <div class="team-social">
