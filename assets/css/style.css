@@ -718,3 +718,13 @@
   }
 }
 
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .carousel-inner {
+        height: 300px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 4048px) {
+    .carousel-inner {
+        height: 600px;
+    }
+}
