@@ -727,4 +727,15 @@
     .carousel-inner {
         height: 600px;
     }
+
+.active{
+    border-bottom: 1px solid black;
+    }
+}
+
+a {
+    color: #474747;
+}
+a:hover {
+    color: #474747;
 }
