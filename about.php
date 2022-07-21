@@ -48,9 +48,9 @@ require_once 'includes/contact-form/process.php';
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="bg-white text-center text-primary">
+                <h1 class="bg-white text-center text-primary">
                 About
-				</h6>
+				</h1>
 
                 <p>
                     Claude & The Pigeon was born because our passion for buying is out of control and after ultimatums from our better halves we decided it would be a easier to start selling than find somewhere new to live.
